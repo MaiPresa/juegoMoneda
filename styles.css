@@ -1,5 +1,18 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 h1 {
     text-align: center;
+}
+
+h2 {
+    text-align: center;
+    flex-grow: 1;
+}
+
+span {
+    display: block;
 }
 
 main {
@@ -8,6 +21,22 @@ main {
     justify-content: center;
     text-align: center;
     flex-direction: column;
+}
+
+header {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+}
+
+header div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: space-between;
 }
 
 .coinContainer {
@@ -49,6 +78,14 @@ main {
     animation: flipTailsRepeat 3s forwards;
 }
 
+.coinHeadsRepeatEven {
+    animation: flipHeadsRepeatEven 3s forwards;
+}
+
+.coinTailsRepeatOdd {
+    animation: flipTailsRepeatOdd 3s forwards;
+}
+
 @keyframes flipTailsCoin {
     0% {
         transform: rotateY(0deg);
@@ -78,6 +115,24 @@ main {
 }
 
 @keyframes flipHeadsRepeat {
+    0% {
+        transform: rotateY(180deg);
+    }
+    100% {
+
+        transform: rotateY(2340deg);
+    }
+}
+@keyframes flipTailsRepeatOdd {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(2160deg);
+    }
+}
+
+@keyframes flipHeadsRepeatEven {
     0% {
         transform: rotateY(180deg);
     }
