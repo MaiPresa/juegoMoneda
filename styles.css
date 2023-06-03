@@ -1,0 +1,88 @@
+h1 {
+    text-align: center;
+}
+
+main {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.coinContainer {
+    position: relative;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    height: 124px;
+}
+
+.coinContainer > div {
+    background-color: cadetblue;
+    height: 124px;
+    width: 124px;
+    border-radius: 50%;
+    position: absolute;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coinHeads {
+    animation: flipHeadsCoin 3s forwards;
+}
+
+.coinTails {
+    animation: flipTailsCoin 3s forwards;
+}
+
+.coinHeadsRepeat {
+    animation: flipHeadsRepeat 3s forwards;
+}
+
+.coinTailsRepeat {
+    animation: flipTailsRepeat 3s forwards;
+}
+
+@keyframes flipTailsCoin {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(1980deg);
+    }
+}
+
+@keyframes flipHeadsCoin {
+    0% {
+        transform: rotateY(180deg);
+    }
+    100% {
+
+        transform: rotateY(2160deg);
+    }
+}
+
+@keyframes flipTailsRepeat {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(2160deg);
+    }
+}
+
+@keyframes flipHeadsRepeat {
+    0% {
+        transform: rotateY(180deg);
+    }
+    100% {
+
+        transform: rotateY(2340deg);
+    }
+}
