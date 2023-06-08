@@ -93,8 +93,23 @@ header div {
 
 #buttonFlip:hover, #buttonReset:hover {
     cursor: pointer;
+}
+
+#buttonFlip:active, #buttonReset:active {
     transform: translate(2px, 3px);
     filter: none;
+}
+
+#buttonFlip:disabled {
+    background-color: silver;
+    color: grey;
+    text-shadow: none;
+}
+
+#buttonReset:disabled {
+    box-shadow: inset 0px 0px 0px 2.5px silver;
+    color: grey;
+    text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.566);
 }
 
 .buttonContainer {
